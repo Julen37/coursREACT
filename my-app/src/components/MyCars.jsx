@@ -3,12 +3,17 @@ import Cars from './Cars.jsx'
 
 class MyCars extends Component {
   render(){
+
+    console.log(this)
+
     return (
       <div>
-        <h1>blabla</h1>
+        <h1>{this.props.title}</h1>
+        <h2>{this.props.subtitle}</h2>
         <Cars children="Mercedes"/>
         <Cars />
         <Cars color="Black">Ford</Cars>
+        <Cars >Peugeot</Cars>
       </div>
     )
   }

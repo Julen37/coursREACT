@@ -8,6 +8,7 @@ const Cars = ({children, color}) => {
   // const colorInfo = color ? <p>Couleur : { color } </p> : <p>Couleur : Néant </p>;
   // au lieu de mettre en deux ligne avec la const + le { colorInfo } on peut ecrire tout direct pour economiser une ligne
 
+// return en ternaire
   return children ? (
     <div style={ {backgroundColor: 'red', width: '400px', padding: '10px', margin:'5px auto'} }> 
       <p>Marque : { children }</p>

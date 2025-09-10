@@ -7,11 +7,16 @@ import MyCars from './components/MyCars.jsx'
 
 class App extends Component {
 
+  state = {
+    titre: 'Mon catalogue voitures',
+    sous_titre: 'Les modèles :',
+  }
+
   render(){
     return (
       <div>
         {/* <MyCars></MyCars> */}
-        <MyCars />
+        <MyCars title={this.state.titre} subtitle={this.state.sous_titre}/>
       </div>
     )
   }
