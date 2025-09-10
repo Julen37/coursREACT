@@ -9,11 +9,14 @@ const Cars = ({children, color}) => {
   // const colorInfo = color ? <p>Couleur : { color } </p> : <p>Couleur : Néant </p>;
   // au lieu de mettre en deux ligne avec la const + le { colorInfo } on peut ecrire tout direct pour economiser une ligne
 
+const colorInfo = color ? color : "Néant";
+
 // return en ternaire
   return children && (
     <Wrapper> 
       <p>Marque : { children }</p>
-      { color ? <p>Couleur : { color } </p> : <p>Couleur : Néant </p> }
+      <p>Couleur: { colorInfo }</p>
+      {/* { color ? <p>Couleur : { color } </p> : <p>Couleur : Néant </p> } */}
     </Wrapper>
   ) 
   // : <p>Pas de data!</p>
