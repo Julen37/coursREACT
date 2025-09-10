@@ -10,13 +10,16 @@ class App extends Component {
   state = {
     titre: 'Mon catalogue voitures',
     sous_titre: 'Les modèles :',
+    color: 'green'
   }
 
   render(){
     return (
       <div>
         {/* <MyCars></MyCars> */}
-        <MyCars title={this.state.titre} subtitle={this.state.sous_titre}/>
+        <MyCars title={this.state.titre} 
+                subtitle={this.state.sous_titre} 
+                color={this.state.color}/>
       </div>
     )
   }

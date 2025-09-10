@@ -8,7 +8,7 @@ class MyCars extends Component {
 
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <h1 style={{ color : this.props.color}} >{this.props.title}</h1>
         <h2>{this.props.subtitle}</h2>
         <Cars children="Mercedes"/>
         <Cars />
