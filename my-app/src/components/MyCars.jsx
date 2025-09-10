@@ -8,7 +8,7 @@ class MyCars extends Component {
         <h1>blabla</h1>
         <Cars children="Mercedes"/>
         <Cars />
-        <Cars color="black">Ford</Cars>
+        <Cars color="Black">Ford</Cars>
       </div>
     )
   }
