@@ -19,7 +19,8 @@ class App extends Component {
         {/* <MyCars></MyCars> */}
         <MyCars title={this.state.titre} 
                 subtitle={this.state.sous_titre} 
-                color={this.state.color}/>
+                color={this.state.color}
+        />
       </div>
     )
   }
