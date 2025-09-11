@@ -8,6 +8,10 @@ class MyCars extends Component {
     cars: ["Ford", "Mercedes", "Peugeot"],
   }
 
+    noCopy = () =>{
+      alert('merci de ne pas copier le texte');
+    }
+
   render(){
 
     // console.log(this)
@@ -25,6 +29,8 @@ class MyCars extends Component {
           <Cars >{this.state.cars[0]}</Cars>
           <Cars color="Black" >{this.state.cars[1]}</Cars>
           <Cars >{this.state.cars[2]}</Cars>
+
+          <p onCopy={this.noCopy}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae itaque excepturi quam veritatis dolor vitae, quia eligendi dicta nam accusamus quis, ducimus nostrum. Minus vitae dignissimos libero eligendi voluptas voluptatum?</p>
       </div>
     )
   }
