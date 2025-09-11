@@ -19,6 +19,12 @@ class App extends Component {
     )
   }
 
+  onclickViaParam = (titre) => {
+    this.setState(
+      {titre: titre}
+    )
+  }
+
   render(){
     return (
       <div>
@@ -28,6 +34,7 @@ class App extends Component {
                 color={this.state.color}
         />
         <button onClick={this.onclick}>Changer le nom du titre</button>
+        <button onClick={()=> this.onclickViaParam('Titre via parametre')}>Changer le nom du titre via parametre</button>
       </div>
     )
   }
