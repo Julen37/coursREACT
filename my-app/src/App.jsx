@@ -33,6 +33,12 @@ class App extends Component {
     )
   }
 
+  changeViaImput =(e) => {
+    this.setState(
+      {titre: e.target.value}
+    )
+  }
+
   render(){
     return (
       <div>
@@ -44,6 +50,7 @@ class App extends Component {
         <button onClick={this.onclick}>Changer le nom du titre</button>
         <button onClick={()=> this.onclickViaParam('Titre via parametre')}>Changer le nom du titre via parametre</button>
         <button onClick={this.onclickViaBind.bind(this, 'Titre via bind')}>Changer le nom du titre via bind</button>
+        <input type="text" onChange={this.changeViaImput} value={this.state.titre}/>
       </div>
     )
   }
