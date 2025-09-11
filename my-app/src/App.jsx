@@ -13,6 +13,12 @@ class App extends Component {
     color: 'green'
   }
 
+  onclick = () => {
+    this.setState(
+      {titre: 'Mon nouveau titre'}
+    )
+  }
+
   render(){
     return (
       <div>
@@ -21,6 +27,7 @@ class App extends Component {
                 subtitle={this.state.sous_titre} 
                 color={this.state.color}
         />
+        <button onClick={this.onclick}>Changer le nom du titre</button>
       </div>
     )
   }
