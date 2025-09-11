@@ -8,7 +8,7 @@ class Mycars extends Component {
             <div>
                 <h1>{this.props.title}</h1>
                     
-                <Car color="red">Ford</Car>
+                <Car year={"2000"} color="red">Ford</Car>
                 <Car>Mercedes</Car>
                 <Car color="green"></Car>
             </div>
