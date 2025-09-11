@@ -25,6 +25,14 @@ class App extends Component {
     )
   }
 
+  // un bind permet de fixer la valeur du this dans une fonction 
+  // ici on fixe this a App et pas a l'evenement click
+  onclickViaBind = (param) => {
+    this.setState(
+      {titre: param}
+    )
+  }
+
   render(){
     return (
       <div>
@@ -35,6 +43,7 @@ class App extends Component {
         />
         <button onClick={this.onclick}>Changer le nom du titre</button>
         <button onClick={()=> this.onclickViaParam('Titre via parametre')}>Changer le nom du titre via parametre</button>
+        <button onClick={this.onclickViaBind.bind(this, 'Titre via bind')}>Changer le nom du titre via bind</button>
       </div>
     )
   }
