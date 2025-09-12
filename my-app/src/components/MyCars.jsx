@@ -23,15 +23,18 @@ class Mycars extends Component {
     }
 
     render() {
+
+        const year = new Date().getFullYear();
+
         return (
             <div>
                 <h1>{this.props.title}</h1>
                     
                 <button onClick={this.addTenYears}> + 10 ans </button>
 
-                <Car color={this.state.voiture[0].color} year={this.state.voiture[0].year}>{this.state.voiture[0].name}</Car>
-                <Car color={this.state.voiture[1].color} year={this.state.voiture[1].year}>{this.state.voiture[1].name}</Car>
-                <Car color={this.state.voiture[2].color} year={this.state.voiture[2].year}>{this.state.voiture[2].name}</Car>
+                <Car color={this.state.voiture[0].color} year={year - this.state.voiture[0].year + ' ans'}>{this.state.voiture[0].name}</Car>
+                <Car color={this.state.voiture[1].color} year={year - this.state.voiture[1].year + ' ans'}>{this.state.voiture[1].name}</Car>
+                <Car color={this.state.voiture[2].color} year={year - this.state.voiture[2].year + ' ans'}>{this.state.voiture[2].name}</Car>
             </div>
            
         )
