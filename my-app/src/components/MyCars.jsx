@@ -36,7 +36,7 @@ class Mycars extends Component {
                 <Car color={this.state.voitures[1].color} year={year - this.state.voitures[1].year + ' ans'}>{this.state.voitures[1].name}</Car>
                 <Car color={this.state.voitures[2].color} year={year - this.state.voitures[2].year + ' ans'}>{this.state.voitures[2].name}</Car> */}
 
-                {
+                {/* {
                     this.state.voitures.map((voiture, index) => {
                         return (
                             <div key={index}>
@@ -45,6 +45,21 @@ class Mycars extends Component {
                                     year={year - voiture.year + ' ans'}
                                 >
                                     {voiture.name}
+                                </Car>
+                            </div>
+                        )
+                    })
+                } */}
+
+                {
+                    this.state.voitures.map(({name, color, year}, index) => {
+                        return (
+                            <div key={index}>
+                                <Car 
+                                    name={name}
+                                    color={color}
+                                >
+                                    {year}
                                 </Car>
                             </div>
                         )
