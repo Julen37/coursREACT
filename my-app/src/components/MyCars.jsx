@@ -4,7 +4,7 @@ import Car from './Cars'
 class Mycars extends Component {
 
     state = {
-        voiture: [
+        voitures: [
             {name: 'Ford', year: '2000', color: 'red'},
             {name: 'Mercedes', year: '2001', color: 'blue'},
             {name: 'Peugeot', year: '2020', color: ''}
@@ -13,7 +13,7 @@ class Mycars extends Component {
 
     addTenYears = () => {
 
-        const updatedState = this.state.voiture.map((param) => {
+        const updatedState = this.state.voitures.map((param) => {
             return param.year -= 10;
         })
 
@@ -32,9 +32,22 @@ class Mycars extends Component {
                     
                 <button onClick={this.addTenYears}> + 10 ans </button>
 
-                <Car color={this.state.voiture[0].color} year={year - this.state.voiture[0].year + ' ans'}>{this.state.voiture[0].name}</Car>
-                <Car color={this.state.voiture[1].color} year={year - this.state.voiture[1].year + ' ans'}>{this.state.voiture[1].name}</Car>
-                <Car color={this.state.voiture[2].color} year={year - this.state.voiture[2].year + ' ans'}>{this.state.voiture[2].name}</Car>
+                {/* <Car color={this.state.voitures[0].color} year={year - this.state.voitures[0].year + ' ans'}>{this.state.voitures[0].name}</Car>
+                <Car color={this.state.voitures[1].color} year={year - this.state.voitures[1].year + ' ans'}>{this.state.voitures[1].name}</Car>
+                <Car color={this.state.voitures[2].color} year={year - this.state.voitures[2].year + ' ans'}>{this.state.voitures[2].name}</Car> */}
+
+                {
+                    this.state.voitures.map(voiture => {
+                        return (
+                            <Car 
+                                color={voiture.color}
+                                year={year - voiture.year + ' ans'}
+                            >
+                                {voiture.name}
+                            </Car>
+                        )
+                    })
+                }
             </div>
            
         )
