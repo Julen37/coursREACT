@@ -22,9 +22,23 @@ class Mycars extends Component {
         )
     }
 
+    getAge = year => {
+        const now = new Date().getFullYear();
+        const age = now - year;
+
+        //ans, an
+        let frenchYearStr = "";
+        if (age === 1) {
+            frenchYearStr = "an";
+        } else if (age > 1) {
+            frenchYearStr = "ans";
+        }
+        return `${age} ${frenchYearStr}`
+    }
+
     render() {
 
-        const year = new Date().getFullYear();
+        // const year = new Date().getFullYear();
 
         return (
             <div>
@@ -56,10 +70,10 @@ class Mycars extends Component {
                         return (
                             <div key={index}>
                                 <Car 
-                                    name={name}
+                                    year={year}
                                     color={color}
-                                >
-                                    {year}
+                                    >
+                                    {name}
                                 </Car>
                             </div>
                         )
