@@ -71,8 +71,9 @@ class Mycars extends Component {
                             <div key={index}>
                                 <Car 
                                     year={year}
+                                    age={this.getAge(year)}
                                     color={color}
-                                    >
+                                >
                                     {name}
                                 </Car>
                             </div>
