@@ -3,6 +3,7 @@ import { Component } from 'react';
 import './App.css';
 import Mycars from './components/MyCars';
 import Maman from './components/Maman';
+import MamanBis from './components/MamanBis';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
       <div className='App'>
         <Mycars title={this.state.titre} />
         <Maman/>
+        <MamanBis/>
       </div>
     )
   }
