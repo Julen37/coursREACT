@@ -3,6 +3,7 @@ import Carz from "./Carz";
 import "./css/Form.css";
 import MyHeaderOne from "./MyHeaderOne";
 import styles from "./css/MyCss.module.css";
+import styled from 'styled-components';
 
 class Form extends Component {
 
@@ -45,6 +46,18 @@ class Form extends Component {
 
         const myClass = this.props.head ? 'red' : 'blue';
 
+        const Title =styled.h1`
+            color: red;
+            font-size: 80px;
+        `
+        const Button =styled.button`
+            background: black;
+            font-size: 15px;
+            color: #ffffff;
+            padding: 10px 12px;
+            border-radius: 8px
+        `
+
         return(
             <div>
                 <Carz color={this.state.color} height="400"/>
@@ -79,6 +92,7 @@ class Form extends Component {
                     </div>
                     <button type="submit">clique et regarde ta console</button>
                 </form>
+                
                 <div>
                     <hr />
                     <button className="buttonBlue">clik</button>
@@ -86,12 +100,17 @@ class Form extends Component {
                     <h1 className={styles.green}>Commentaire 1</h1>
                     <MyHeaderOne/>
                 </div>
-
+                
+{/* bootstrap */}
                 <div>
                     <hr />
                     <h1 className="fw-bold text-primary">Commentaire 2</h1>
                     <button className="btn btn-outline-danger">Valider</button>
                 </div>
+
+{/* styled component */}
+                <Title>Encore un commentaire mais avec styledcomponent</Title>
+                <Button>clik</Button>
             </div>
         )
     }
