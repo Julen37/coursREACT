@@ -5,3 +5,14 @@ const MyHeaderOne = () => {
 }
 
 export default MyHeaderOne
+
+// fonctionne qu'en react native pas en web
+// const styles = StyleSheet.create(
+//     {
+//         MaClassCss : {
+//             color: 'blue',
+
+//         }
+//     }
+// )
+// on mettrait dans le h1 className="styles.MaClassCass" pour que ca fonctionne
