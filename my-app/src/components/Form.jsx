@@ -1,5 +1,6 @@
 import { Component } from "react";
 import Carz from "./Carz";
+import "./css/Form.css";
 
 class Form extends Component {
 
@@ -34,10 +35,19 @@ class Form extends Component {
     }
 
     render() {
+        
+        const titreRouge = {
+            fontSize: '50px', 
+            color: 'red'
+        }
+
+        const myClass = this.props.head ? 'red' : 'blue';
+
         return(
             <div>
                 <Carz color={this.state.color} height="400"/>
-                <h1>Commentaire</h1>
+                <h1 style={{fontSize: '50px', color: 'red'}}>Commentaire</h1>
+                <h1 style={titreRouge}>Commentaire</h1>
 
                 <form onSubmit={this.handleSubmitForm}>
                     <div>
@@ -65,7 +75,9 @@ class Form extends Component {
                         <label>Commentaire</label>
                         <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
                     </div>
-                    <button type="submit">clique</button>
+                    <button type="submit">clique et regarde ta console</button>
+                    <button className="buttonBlue">clik</button>
+                    <p className={`${myClass} bigFont`}>je suis rouge ou bleu</p>
                 </form>
             </div>
         )

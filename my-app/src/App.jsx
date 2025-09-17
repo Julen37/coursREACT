@@ -18,7 +18,7 @@ class App extends Component {
         <Mycars title={this.state.titre} />
         <Maman/>
         <MamanBis/>
-        <Form/>
+        <Form head={true}/>
       </div>
     )
   }
