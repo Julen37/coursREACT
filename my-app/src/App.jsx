@@ -4,7 +4,7 @@ import './App.css';
 import Mycars from './components/MyCars';
 import Maman from './components/Maman';
 import MamanBis from './components/MamanBis';
-import Carz from './components/Carz';
+import Form from './components/Form';
 
 class App extends Component {
 
@@ -18,7 +18,7 @@ class App extends Component {
         <Mycars title={this.state.titre} />
         <Maman/>
         <MamanBis/>
-        <Carz color="red" height="400"/>
+        <Form/>
       </div>
     )
   }
