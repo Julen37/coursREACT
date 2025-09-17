@@ -28,15 +28,18 @@ class Form extends Component {
         )
     }
 
+    handleSubmitForm = e => {
+        e.preventDefault();
+        console.log(`Username: ${this.state.username}, Couleur: ${this.state.color}, Commentaire: ${this.state.comment}`)
+    }
+
     render() {
         return(
             <div>
                 <Carz color={this.state.color} height="400"/>
-                <div>
-                    <h1>Commentaire</h1>
-                    <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
-                </div>
-                <form>
+                <h1>Commentaire</h1>
+
+                <form onSubmit={this.handleSubmitForm}>
                     <div>
                         <label>Pseudo </label>
                         <input type="text" value={this.state.username} onChange={this.handleUsername}/>
@@ -52,12 +55,17 @@ class Form extends Component {
                         <select value={this.state.color} onChange={this.handleColor} name="" id="">
                             {
                                 this.state.colors.map((color, index) =>
-                                {
-                                    return <option key={index} value={color}>{color}</option>
-                                })
-                            }
+                                    {
+                                        return <option key={index} value={color}>{color}</option>
+                                    })
+                                }
                         </select>
                     </div>
+                    <div>
+                        <label>Commentaire</label>
+                        <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
+                    </div>
+                    <button type="submit">clique</button>
                 </form>
             </div>
         )
