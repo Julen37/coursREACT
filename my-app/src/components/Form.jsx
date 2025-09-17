@@ -85,7 +85,12 @@ class Form extends Component {
                     <p className={`${myClass} bigFont`}>je suis rouge ou bleu</p>
                     <h1 className={styles.green}>Commentaire 1</h1>
                     <MyHeaderOne/>
-                    <p>je suis rouge ou bleu</p>
+                </div>
+
+                <div>
+                    <hr />
+                    <h1 className="fw-bold text-primary">Commentaire 2</h1>
+                    <button className="btn btn-outline-danger">Valider</button>
                 </div>
             </div>
         )
