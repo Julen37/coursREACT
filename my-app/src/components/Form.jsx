@@ -1,6 +1,8 @@
 import { Component } from "react";
 import Carz from "./Carz";
 import "./css/Form.css";
+import MyHeaderOne from "./MyHeaderOne";
+import styles from "./css/MyCss.module.css";
 
 class Form extends Component {
 
@@ -76,9 +78,15 @@ class Form extends Component {
                         <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
                     </div>
                     <button type="submit">clique et regarde ta console</button>
+                </form>
+                <div>
+                    <hr />
                     <button className="buttonBlue">clik</button>
                     <p className={`${myClass} bigFont`}>je suis rouge ou bleu</p>
-                </form>
+                    <h1 className={styles.green}>Commentaire 1</h1>
+                    <MyHeaderOne/>
+                    <p>je suis rouge ou bleu</p>
+                </div>
             </div>
         )
     }
