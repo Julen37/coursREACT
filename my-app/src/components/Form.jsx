@@ -31,7 +31,7 @@ class Form extends Component {
     render() {
         return(
             <div>
-                <Carz color="red" height="400"/>
+                <Carz color={this.state.color} height="400"/>
                 <div>
                     <h1>Commentaire</h1>
                     <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
