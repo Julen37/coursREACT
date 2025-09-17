@@ -15,6 +15,12 @@ class Form extends Component {
         )
     }
 
+    handleColor = event => {
+        this.setState(
+            {color: event.target.value}
+        )
+    }
+
     render() {
         return(
             <div>
@@ -33,11 +39,11 @@ class Form extends Component {
                             <option value="rouge">Rouge</option>
                             <option value="orange">Orange</option>
                         </select>
-                        <select name="" id="">
+                        <select value={this.state.color} onChange={this.handleColor} name="" id="">
                             {
-                                this.state.colors.map((color) =>
+                                this.state.colors.map((color, index) =>
                                 {
-                                    return <option value={color}>{color}</option>
+                                    return <option key={index} value={color}>{color}</option>
                                 })
                             }
                         </select>
