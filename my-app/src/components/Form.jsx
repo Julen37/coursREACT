@@ -6,7 +6,8 @@ class Form extends Component {
     state = {
         username: '',
         color: '',
-        colors: ["", "red", "blue", "green", "black", "pink"]
+        colors: ["", "red", "blue", "green", "black", "pink"],
+        comment: '',
     }
 
     handleUsername = e => {
@@ -21,11 +22,20 @@ class Form extends Component {
         )
     }
 
+    handleComments = event => {
+        this.setState(
+            {comment: event.target.value}
+        )
+    }
+
     render() {
         return(
             <div>
                 <Carz color="red" height="400"/>
-                <h1>Commentaire</h1>
+                <div>
+                    <h1>Commentaire</h1>
+                    <textarea value={this.state.comment} onChange={this.handleComments} name="" id=""></textarea>
+                </div>
                 <form>
                     <div>
                         <label>Pseudo </label>
