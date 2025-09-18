@@ -1,10 +1,11 @@
 import { Component } from 'react';
 // import Mycars from './components/Mycars';
 import './App.css';
-import Mycars from './components/MyCars';
+import Mycars from './components/Mycars.jsx';
 import Maman from './components/Maman';
 import MamanBis from './components/MamanBis';
 import Form from './components/Form';
+import Books from './components/exo7/books';
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
         <Maman/>
         <MamanBis/>
         <Form head={true}/>
+        <Books/>
       </div>
     )
   }
