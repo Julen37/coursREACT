@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Btn = ({children, btnStyle}) => {
+const Btn = ({children, btnStyle, handleClick}) => {
 
     const customBtn = {
         backgroundColor: 'grey',
@@ -17,7 +17,7 @@ const Btn = ({children, btnStyle}) => {
 
   return (
     <div> 
-      <button style={{...customBtn, ...btnStyle}}>{children}</button>
+      <button onClick={handleClick} style={{...customBtn, ...btnStyle}}>{children}</button>
       {/* ... c'est le spread operator qui permet de récuperer l'objet et de pouvoir le modifier, ajouter, supprimer ce qu'il y a l'interrieur*/}
     </div>
   )

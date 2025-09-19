@@ -38,27 +38,28 @@ class Form extends Component {
         console.log(`Username: ${this.state.username}, Couleur: ${this.state.color}, Commentaire: ${this.state.comment}`)
     }
 
+    
     render() {
         
         const titreRouge = {
             fontSize: '50px', 
             color: 'red'
         }
-
+        
         const myClass = this.props.head ? 'red' : 'blue';
-
+        
         const Title =styled.h1`
-            color: red;
-            font-size: 80px;
+        color: red;
+        font-size: 80px;
         `
         const Button =styled.button`
-            background: black;
-            font-size: 15px;
-            color: #ffffff;
-            padding: 10px 12px;
-            border-radius: 8px
+        background: black;
+        font-size: 15px;
+        color: #ffffff;
+        padding: 10px 12px;
+        border-radius: 8px
         `
-
+        
         const red= {
             backgroundColor: 'red',
             borderRadius: '0px',
@@ -68,9 +69,20 @@ class Form extends Component {
             backgroundColor: 'blue',
             borderRadius: '40px',
             padding: '5px 15px',
-
+            
+        }
+        
+        const sayHello = () => {
+            alert("hello");
         }
 
+        const sayAngry = () => {
+            alert("ah bah enfin");
+        }
+
+        const sayThanks = () => {
+            alert("Merci");
+        }
         return(
             <div>
                 <Carz color={this.state.color} height="400"/>
@@ -125,13 +137,13 @@ class Form extends Component {
                 <Title>Encore un commentaire mais avec styledcomponent</Title>
                 <Button>clik</Button>
 
-{/* exo 8 spread operator*/}
+{/* exo 8 spread operator + exo 9 function*/}
                 <div>
                     <hr />
                     <h1>Exo 8 avec spread operator (...)</h1>
-                    <Btn >Clique là</Btn>
-                    <Btn btnStyle={red}>Clique ici</Btn>
-                    <Btn btnStyle={blue}>Clique stp</Btn>
+                    <Btn handleClick={sayHello}>Clique là</Btn>
+                    <Btn handleClick={sayAngry} btnStyle={red}>Clique ici</Btn>
+                    <Btn handleClick={sayThanks} btnStyle={blue}>Clique stp</Btn>
                 </div>
             </div>
         )
