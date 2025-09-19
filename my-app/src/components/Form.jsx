@@ -4,6 +4,7 @@ import "./css/Form.css";
 import MyHeaderOne from "./MyHeaderOne";
 import styles from "./css/MyCss.module.css";
 import styled from 'styled-components';
+import Btn from "./CustomBtn";
 
 class Form extends Component {
 
@@ -58,6 +59,18 @@ class Form extends Component {
             border-radius: 8px
         `
 
+        const red= {
+            backgroundColor: 'red',
+            borderRadius: '0px',
+            color: 'pink'
+        }
+        const blue={
+            backgroundColor: 'blue',
+            borderRadius: '40px',
+            padding: '5px 15px',
+
+        }
+
         return(
             <div>
                 <Carz color={this.state.color} height="400"/>
@@ -111,6 +124,15 @@ class Form extends Component {
 {/* styled component */}
                 <Title>Encore un commentaire mais avec styledcomponent</Title>
                 <Button>clik</Button>
+
+{/* exo 8 spread operator*/}
+                <div>
+                    <hr />
+                    <h1>Exo 8 avec spread operator (...)</h1>
+                    <Btn >Clique là</Btn>
+                    <Btn btnStyle={red}>Clique ici</Btn>
+                    <Btn btnStyle={blue}>Clique stp</Btn>
+                </div>
             </div>
         )
     }
